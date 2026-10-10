@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>claude-swap — Switch tracks before the signal goes red.</title>
+  <meta name="description" content="Switch tracks before the signal goes red.">
+  <meta name="author" content="Independent explainer for realiti4's claude-swap — built by Stuart Kerr at ISOvision.ai">
+  <link rel="canonical" href="https://claude-swap-explainer.netlify.app/">
+  <meta name="theme-color" content="#ffb020">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="claude-swap — Switch tracks before the signal goes red.">
+  <meta property="og:description" content="Switch tracks before the signal goes red.">
+  <meta property="og:url" content="https://claude-swap-explainer.netlify.app/">
+  <meta property="og:image" content="https://claude-swap-explainer.netlify.app/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="claude-swap — Switch tracks before the signal goes red.">
+  <meta name="twitter:description" content="Switch tracks before the signal goes red.">
+  <meta name="twitter:image" content="https://claude-swap-explainer.netlify.app/assets/social-card.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "claude-swap",
+  "description": "Switch tracks before the signal goes red.",
+  "url": "https://claude-swap-explainer.netlify.app/",
+  "applicationCategory": "DeveloperApplication",
+  "image": "https://claude-swap-explainer.netlify.app/assets/social-card.png",
+  "author": {
+    "@type": "Person",
+    "name": "realiti4"
+  },
+  "codeRepository": "https://github.com/realiti4/claude-swap"
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="prov-banner">
+    <div class="wrap prov-banner-inner">
+      <p class="prov-attr">An independent explainer for <strong>realiti4</strong>'s <a href="https://github.com/realiti4/claude-swap" target="_blank" rel="noopener">claude-swap</a> — built to help you actually implement it.</p>
+      <p class="prov-live"><span class="prov-dot" aria-hidden="true">&#9679;</span> source <code>github.com/realiti4/claude-swap</code></p>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="claude-swap explainer home">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="8" fill="none" stroke="var(--accent)" stroke-width="2"></rect>
+        <rect x="9" y="9" width="14" height="14" rx="4" fill="var(--accent-2)"></rect>
+        <circle cx="16" cy="16" r="3" fill="var(--on-accent)"></circle>
+      </svg>
+        <span>claude-swap</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#what-it-is">What it is</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#get-started">Get started</a>
+        <a href="#the-pack">AI pack</a>
+        <a href="https://github.com/realiti4/claude-swap" target="_blank" rel="noopener">GitHub &#8599;</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+  <a id="top"></a>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">The spare tank for your coding assistant</span>
+          <h1>Never stare at a dead chat again.</h1>
+          <p class="lede">Claude Code is a program that chats with you and writes code with you, like a tutor typing alongside you. Every account only gets so many messages in a few hours before it goes quiet — like a phone call that just hangs up mid-sentence. claude-swap keeps extra accounts standing by, fueled and ready. The moment one is close to its limit, it swaps you to a fresh one. You keep typing. It keeps answering. You never even notice the handoff.</p>
+          <p class="sub">Switch by hand, or let it watch the clock and swap for you automatically.</p>
+          <p class="attrib-lede">An <strong>independent explainer</strong> for <strong>Onur Cetinkol <span class="attrib-handle">(realiti4)</span></strong>'s <a href="https://github.com/realiti4/claude-swap" target="_blank" rel="noopener">claude-swap</a> — built to take you from "never seen it" to "ready to implement".</p>
+          <div class="cta-row">
+          <a class="cta" href="#get-started">Get started</a>
+          <a class="cta ghost" href="https://github.com/realiti4/claude-swap" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        <div class="meta-row"><span><b>Language</b> Python</span><span><b>Type</b> Command-line tool</span></div>
+        </div>
+        <figure class="hero-art">
+          <button type="button" class="diagram-zoom" data-src="assets/hero.png" data-alt="claude-swap: a dark switch tower glowing with parallel track-lanes, usage gauges ticking upward, one lever already mid-throw toward the track that still has room to run" aria-label="Enlarge: claude-swap: a dark switch tower glowing with parallel track-lanes, usage gauges ticking upward, one lever already mid-throw toward the track that still has room to run"><img src="assets/hero.png" alt="claude-swap: a dark switch tower glowing with parallel track-lanes, usage gauges ticking upward, one lever already mid-throw toward the track that still has room to run"></button>
+        </figure>
+      </div>
+    </div>
+  </section>
+    <div class="sections">
+      <div class="wrap">
+    <details class="section" id="problem" open>
+      <summary>
+        <span class="num">01</span>
+        <span class="head-text">
+          <h2>The wall you hit mid-sentence</h2>
+          <span class="q">Why does this need to exist?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">Picture chatting with a coding assistant that writes code right alongside you.</p>
+      <p>You're deep in a project, and the assistant is helping you write code. Every message counts toward a limit on your account. That limit works like a stopwatch — it quietly resets every few hours.</p>
+      <p>Hit the limit, and the assistant goes silent until the stopwatch runs down. You could open a second account in another window. But you have to notice your first stopwatch is running low, stop what you're doing, and switch over by hand — every single time, all day.</p>
+      <p>Running two accounts at once is worse. You're tracking two stopwatches in your head. One careless slip logs you out of the wrong one mid-task.</p>
+      
+      <figure class="figure">
+        <span class="tier friendly">The problem</span>
+        <button type="button" class="diagram-zoom" data-src="assets/problem.png" data-alt="claude-swap: the problem" aria-label="Enlarge: claude-swap: the problem"><img src="assets/problem.png" alt="claude-swap: the problem" loading="lazy"></button>
+      </figure>
+      </div>
+    </details>
+
+    <details class="section" id="what-it-is" open>
+      <summary>
+        <span class="num">02</span>
+        <span class="head-text">
+          <h2>A spare account, ready the second you need it</h2>
+          <span class="q">What is it, concretely?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">claude-swap is built for anyone who uses a coding assistant so much that one account isn't enough.</p>
+      <p>It keeps several of your accounts standing by, each with its own stopwatch and its own leftover time. You can jump to any of them by hand, in one step, without logging out first.</p>
+      <p>It also shows a live dashboard — every account's used-up percentage and reset time, all on one screen, like a fuel gauge for each login. It runs on Windows, macOS, and Linux.</p>
+      <p>For heavy users, it can run two accounts at the same time, each in its own window, instead of one after another.</p>
+      
+      <figure class="figure diagram concept">
+        <span class="tier tech">The big idea</span>
+        <button type="button" class="diagram-zoom" data-src="assets/big-idea.svg" data-alt="claude-swap watches each account's usage and throws the switch to the one with the most quota left before any account hits its limit" aria-label="Enlarge: claude-swap watches each account's usage and throws the switch to the one with the most quota left before any account hits its limit"><img src="assets/big-idea.svg" alt="claude-swap watches each account's usage and throws the switch to the one with the most quota left before any account hits its limit" loading="lazy"></button>
+      </figure>
+      
+      <table class="tbl"><caption class="visually-hidden">At a glance</caption>
+        <thead><tr><th>Aspect</th><th>Detail</th></tr></thead>
+        <tbody>
+        <tr><td>What it switches between</td><td>Several logins to the same coding assistant</td></tr>
+        <tr><td>How you switch</td><td>By hand, or automatically before you hit a limit</td></tr>
+        <tr><td>Platforms</td><td>macOS, Linux, and Windows</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </details>
+
+    <details class="section" id="the-insight" open>
+      <summary>
+        <span class="num">03</span>
+        <span class="head-text">
+          <h2>The trick: hand off before you're tired</h2>
+          <span class="q">What's the clever trick?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">The clever part isn't juggling accounts by hand — it's doing the juggling for you, like a relay race.</p>
+      <p>claude-swap quietly watches how close each account is to its limit — the same numbers you'd see if you checked yourself.</p>
+      <p>The moment your active account nears its limit, it picks whichever other account has the most time left. Then it hands you off to that account before you ever get cut off.</p>
+      <p>It's like a relay race: the next runner starts running before the first one runs out of breath. No baton drop, no awkward pause. The race never stops. You just don't see the handoff.</p>
+      
+      <figure class="figure diagram concept">
+        <span class="tier tech">The aha</span>
+        <button type="button" class="diagram-zoom" data-src="assets/insight.svg" data-alt="the system acts pre-emptively on a threshold and never lets a swap collide with an in-flight token refresh" aria-label="Enlarge: the system acts pre-emptively on a threshold and never lets a swap collide with an in-flight token refresh"><img src="assets/insight.svg" alt="the system acts pre-emptively on a threshold and never lets a swap collide with an in-flight token refresh" loading="lazy"></button>
+      </figure>
+      <p class="oh">It swaps you to a fresh account before the clock ever hits zero — you never even feel the wall.</p>
+      </div>
+    </details>
+
+    <details class="section" id="how-it-works" open>
+      <summary>
+        <span class="num">04</span>
+        <span class="head-text">
+          <h2>What happens under the hood</h2>
+          <span class="q">How does it actually work?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">One layer deeper: the words claude-swap's own documentation actually uses.</p>
+      <p>Each account's login is saved as an OAuth token — a small piece of proof that you're signed in, so you don't retype a password every time. claude-swap backs up each account's token and settings the first time you add that account.</p>
+      <p>When you switch, it swaps only the account-specific part of your login and leaves shared state alone, such as logins for extra tools connected to the assistant. On Linux and Windows, it rewrites a credential file that Claude Code re-reads whenever it changes. On macOS, credentials live in the system Keychain, which Claude Code caches for about 30 seconds before it picks up a switch.</p>
+      <p>Automatic switching runs as a background loop that checks usage every so often. It refreshes a target account's token before activating it, and holds Claude Code's own credential lock while writing, so a swap never collides with a token refresh already in progress.</p>
+      <div class="dual">
+      <figure class="figure diagram">
+        <span class="tier tech">Architecture</span>
+        <button type="button" class="diagram-zoom" data-src="assets/architecture.svg" data-alt="the conceptual parts a reader must hold in their head: account slots, token store, usage poller, switch engine, and the interfaces that drive it" aria-label="Enlarge: the conceptual parts a reader must hold in their head: account slots, token store, usage poller, switch engine, and the interfaces that drive it"><img src="assets/architecture.svg" alt="the conceptual parts a reader must hold in their head: account slots, token store, usage poller, switch engine, and the interfaces that drive it" loading="lazy"></button>
+        <figcaption>Architecture — modules, components and how they depend on each other.</figcaption>
+      </figure>
+      <figure class="figure diagram">
+        <span class="tier tech">Data flow</span>
+        <button type="button" class="diagram-zoom" data-src="assets/flow.svg" data-alt="the runtime loop: poll usage, compare to threshold, pick the fullest account, refresh its token, then swap credentials atomically" aria-label="Enlarge: the runtime loop: poll usage, compare to threshold, pick the fullest account, refresh its token, then swap credentials atomically"><img src="assets/flow.svg" alt="the runtime loop: poll usage, compare to threshold, pick the fullest account, refresh its token, then swap credentials atomically" loading="lazy"></button>
+        <figcaption>Data flow — how a request moves through the system at runtime.</figcaption>
+      </figure>
+      </div>
+      </div>
+    </details>
+
+    <details class="section" id="use-cases" open>
+      <summary>
+        <span class="num">05</span>
+        <span class="head-text">
+          <h2>Who actually reaches for this</h2>
+          <span class="q">Who would reach for this, and how?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">claude-swap is for anyone using Claude Code enough to bump into its limits — which, if you're reading this, might already be you.</p>
+      
+      <figure class="figure">
+        <span class="tier friendly">In the real world</span>
+        <button type="button" class="diagram-zoom" data-src="assets/useCase.png" data-alt="claude-swap in use" aria-label="Enlarge: claude-swap in use"><img src="assets/useCase.png" alt="claude-swap in use" loading="lazy"></button>
+      </figure>
+      <div class="gallery"><div class="grid">
+      <details class="case" open>
+        <summary>
+          <span class="uc-num">1</span>
+          <span class="uc-title">The solo builder who codes for hours</span>
+          <span class="uc-tag">Solo use</span>
+          <span class="chev" aria-hidden="true">&rsaquo;</span>
+        </summary>
+        <div class="uc-body">
+          <p>You code for hours with Claude Code and keep hitting its 5-hour or 7-day limit.</p>
+      <p>Turn on <code>cswap auto</code> once, and it watches your usage and switches accounts for you — so you can keep working without noticing the wall was ever there.</p>
+        </div>
+      </details>
+      <details class="case" open>
+        <summary>
+          <span class="uc-num">2</span>
+          <span class="uc-title">Two accounts, two tasks, at once</span>
+          <span class="uc-tag">Parallel work</span>
+          <span class="chev" aria-hidden="true">&rsaquo;</span>
+        </summary>
+        <div class="uc-body">
+          <p>Maybe you want one account grinding through a long task, and another free for quick questions in a different window.</p>
+      <p><code>cswap run 2</code> launches Claude Code as a second account in just that terminal, while everywhere else stays on your default login.</p>
+        </div>
+      </details>
+      <details class="case" open>
+        <summary>
+          <span class="uc-num">3</span>
+          <span class="uc-title">Scripts, servers, and teams</span>
+          <span class="uc-tag">Automation</span>
+          <span class="chev" aria-hidden="true">&rsaquo;</span>
+        </summary>
+        <div class="uc-body">
+          <p>On a headless server with no browser, <code>cswap add-token</code> registers an account straight from a setup-token or API key (a long credential string).</p>
+      <p>In a cron job (a scheduled task that runs by itself), <code>cswap auto --once</code> checks usage a single time and switches if needed, reporting the result in its exit code.</p>
+        </div>
+      </details>
+      </div></div>
+      </div>
+    </details>
+
+    <details class="section" id="get-started" open>
+      <summary>
+        <span class="num">06</span>
+        <span class="head-text">
+          <h2>Get it running</h2>
+          <span class="q">How do I run it myself?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">claude-swap is a command-line tool. Install it with <code>uv</code> (a fast Python package manager) or <code>pipx</code> — either works.</p>
+      <div class="install-block"><pre class="code-block"><code>uv tool install claude-swap</code></pre></div>
+      <ol class="steps">
+        <li><strong>Get a package manager</strong> Make sure you have <code>uv</code> or <code>pipx</code> on your machine — small tools that install command-line programs like this one.</li>
+        <li><strong>Install the tool</strong> Run <code>uv tool install claude-swap</code> (or <code>pipx install claude-swap</code>). This puts the <code>cswap</code> command on your machine.</li>
+        <li><strong>Confirm it's there</strong> Run <code>uv run cswap help</code> — you'll see the full list of commands, including <code>add</code>, <code>list</code>, <code>switch</code>, and <code>auto</code>.</li>
+        <li><strong>Add your first account</strong> Run <code>cswap add</code> and log in through the browser flow; claude-swap backs up that account's login so it can switch to it later.</li>
+        <li><strong>Open the live dashboard</strong> Run <code>cswap</code> on its own to open the full-screen dashboard, with live 5-hour and 7-day usage bars for every account you've added.</li>
+        <li><strong>Turn on auto-switching</strong> Run <code>cswap auto</code> to let claude-swap watch your usage and switch you to a fresh account before you hit a limit.</li>
+        <li><strong>Go further (optional)</strong> On macOS, install the menu bar extra with <code>uv tool install 'claude-swap[menubar]'</code>, or fine-tune behavior with <code>cswap config</code>.</li>
+      </ol>
+      </div>
+    </details>
+
+    <details class="section" id="the-pack" open>
+      <summary>
+        <span class="num">07</span>
+        <span class="head-text">
+          <h2>Take the knowledge pack with you</h2>
+          <span class="q">Does my AI get it too?</span>
+        </span>
+        <span class="chev" aria-hidden="true">&rsaquo;</span>
+      </summary>
+      <div class="body">
+      <p class="lead-in">This page is generated from a small indexed knowledge base of claude-swap's own documentation — thirteen passages, ready to search or hand to another tool.</p>
+      <div class="tree" style="white-space:pre"><span class="cmt"># claude-swap-knowledge-pack.zip</span>
+<span class="d">for-ai/</span>            <span class="cmt"># wire this into your agent</span>
+  <span class="f">claude-swap-kb.rvf</span>            <span class="cmt"># 384-dim vector brain (semantic search)</span>
+  <span class="f">claude-swap-kb.passages.jsonl</span> <span class="cmt"># full passage text (search returns TEXT)</span>
+  <span class="f">claude-swap-symbols.json</span>      <span class="cmt"># exact public API</span>
+  <span class="f">claude-swap-dep-graph.json</span>    <span class="cmt"># what depends on what</span>
+  <span class="f">claude-swap-entrypoints.json</span>  <span class="cmt"># build / test / run commands</span>
+  <span class="f">ask-kb.mjs</span> · <span class="f">kb-mcp-server.mjs</span>  <span class="cmt"># CLI + MCP search server</span>
+<span class="d heart">for-humans/</span>        <span class="cmt"># read first</span>
+  <span class="f heart">claude-swap-primer.md</span>      <span class="cmt"># the human orientation</span></div>
+      <div class="dl-cta"><a class="cta" href="claude-swap-knowledge-pack.zip" download>Download the knowledge pack</a><span class="dl-meta">RVF vector KB + MCP server — drop it into your own agent.</span></div>
+      <a class="dropzone" href="claude-swap-knowledge-pack.zip" download><span class="dz-icon" aria-hidden="true">&darr;</span><strong>Give your AI the same understanding</strong><span class="dz-hint">claude-swap-knowledge-pack.zip</span></a>
+      </div>
+    </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="explainer-footer" role="contentinfo">
+    <div class="wrap explainer-footer-inner">
+      <p class="ef-credit">
+        Explainer page created by <strong><a href="https://stuart-kerr-card.netlify.app" rel="author noopener" target="_blank">Stuart Kerr</a></strong> at
+        <a href="https://isovision.ai" rel="noopener" target="_blank">ISOvision</a>
+        <span class="ef-fine">Built with the open-source <a href="https://github.com/stuinfla/Repo-Explainer" rel="noopener" target="_blank">explainmyrepo</a> engine.
+        Found this valuable? <a href="https://github.com/stuinfla/Repo-Explainer" rel="noopener" target="_blank">A star on GitHub</a> genuinely helps &mdash;
+        and if something's off, <a href="https://github.com/stuinfla/Repo-Explainer/issues" rel="noopener" target="_blank">open an issue</a>: happy to help fix it.</span>
+      </p>
+      <a class="ef-cta" href="https://explainmyrepo.isovision.ai" target="_blank" rel="noopener">
+        <span class="ef-cta-lead">Would you like your own repo explainer page?</span>
+        <strong>Generate one here</strong>
+        <span class="ef-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </footer>
+  <dialog class="diagram-lightbox" id="diagram-lightbox" aria-label="Enlarged diagram">
+    <button type="button" class="lightbox-close" data-close aria-label="Close">&times;</button>
+    <img id="diagram-lightbox-img" src="" alt="">
+  </dialog>
+  <script>
+  (function () {
+    var dlg = document.getElementById('diagram-lightbox');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    var img = document.getElementById('diagram-lightbox-img');
+    document.querySelectorAll('.diagram-zoom').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        img.src = btn.getAttribute('data-src');
+        img.alt = btn.getAttribute('data-alt') || '';
+        dlg.showModal();
+      });
+    });
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.hasAttribute('data-close')) dlg.close();
+    });
+  })();
+  </script>
+</body>
+</html>

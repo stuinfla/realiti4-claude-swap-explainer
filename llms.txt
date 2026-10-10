@@ -1,0 +1,18 @@
+# claude-swap
+
+> Switch tracks before the signal goes red.
+
+Switch tracks before the signal goes red.
+
+This is an independent, art-directed explainer for realiti4's claude-swap — it takes a newcomer from "never seen it" to "ready to implement", grounded in a real RVF knowledge base of the source.
+
+## What it is
+claude-swap: a nighttime railway switchyard — a signal tower where multiple glowing tracks (accounts) run in parallel, each with its own gauge, and a lever throws the train onto a fresh track the instant one nears its red signal
+
+## For your AI
+A downloadable knowledge pack (RVF vector KB + MCP server) ships with this page so your agent can search the source too: https://claude-swap-explainer.netlify.app/claude-swap-knowledge-pack.zip
+
+## Links
+- Live explainer: https://claude-swap-explainer.netlify.app/
+- Source repository: https://github.com/realiti4/claude-swap
+- AI knowledge pack: https://claude-swap-explainer.netlify.app/claude-swap-knowledge-pack.zip

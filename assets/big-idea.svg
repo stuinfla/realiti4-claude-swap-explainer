@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 928 499" width="928" height="499" role="img" aria-labelledby="d-title d-desc">
+  <title id="d-title">claude-swap — Big Idea</title>
+  <desc id="d-desc">claude-swap watches each account's usage and throws the switch to the one with the most quota left before any account hits its limit</desc>
+  <metadata><![CDATA[
+Every account on its own track -> Live 5h/7d usage gauge per track -> Threshold lever (default 90%) -> Switch thrown to fullest-quota track -> Work continues on new account
+]]></metadata>
+  <style>
+    .flow-line { stroke-dasharray: 8 10; stroke-width: 3; animation: flow-dash 1.1s linear infinite; }
+    @keyframes flow-dash { to { stroke-dashoffset: -36; } }
+    .node-pulse { transform-box: fill-box; transform-origin: center; animation: node-pulse 2.1s cubic-bezier(0.4,0,0.2,1) infinite; }
+    @keyframes node-pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.6); } }
+    @media (prefers-reduced-motion: reduce) { .flow-line, .node-pulse { animation: none; } }
+  </style>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#0b1018"/><stop offset="0.55" stop-color="#0a0e15"/><stop offset="1" stop-color="#070a10"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0.5" cy="0.02" r="0.8">
+      <stop offset="0" stop-color="rgba(255,176,32,0.1)"/><stop offset="0.5" stop-color="rgba(255,176,32,0.025)"/><stop offset="1" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.09)"/><stop offset="0.5" stop-color="rgba(255,255,255,0.015)"/><stop offset="1" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.014)"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="11"/></filter>
+    <filter id="glowS" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="cardSh" x="-40%" y="-50%" width="180%" height="210%">
+      <feDropShadow dx="0" dy="6" stdDeviation="11" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <!-- concept archetype: grid -->
+  <rect x="0" y="0" width="928" height="499" fill="url(#bg)"/>
+  <rect x="0" y="0" width="928" height="499" fill="url(#spot)"/>
+  <rect x="0" y="0" width="928" height="499" fill="url(#grid)"/>
+<text x="464" y="44" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Monaco,Consolas,monospace" font-size="13" font-weight="600" fill="#ffb020" text-anchor="middle" letter-spacing="3">THE BIG IDEA</text>
+  <text x="464" y="80" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="30" font-weight="800" fill="#ffb020" text-anchor="middle" opacity="0.45" filter="url(#glowS)">How the switchyard decides</text>
+<text x="464" y="80" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="30" font-weight="800" fill="#f1f5f9" text-anchor="middle">How the switchyard decides</text>
+  <line x1="430" y1="98" x2="498" y2="98" stroke="#ffb020" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <line x1="315" y1="202" x2="331" y2="202" stroke="#ffb020" stroke-width="9" opacity="0.3" filter="url(#glow)" stroke-linecap="round"/>
+  <line class="flow-line" x1="315" y1="202" x2="331" y2="202" stroke="#ffc458" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M 323.1 206.3 L 331.0 202.0 L 323.1 197.7" fill="none" stroke="#ffc458" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="47" y="147" width="270" height="114" rx="19" fill="#ffb020" opacity="0.200" filter="url(#glow)"/>
+  <rect x="52" y="157" width="260" height="104" rx="15" fill="rgba(102,70,13,0.85)"/>
+  <rect x="52" y="150" width="260" height="104" rx="15" fill="rgba(255,176,32,0.16)" stroke="rgba(255,176,32,0.42)" stroke-width="1.25" filter="url(#cardSh)"/>
+  <rect x="52" y="150" width="260" height="104" rx="15" fill="url(#sheen)"/>
+  <path d="M 67 151.25 H 297" stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<text x="182" y="192" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">Every account on its own</text>
+<text x="182" y="212" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">track</text>
+  <line x1="597" y1="202" x2="613" y2="202" stroke="#35d07f" stroke-width="9" opacity="0.3" filter="url(#glow)" stroke-linecap="round"/>
+  <line class="flow-line" x1="597" y1="202" x2="613" y2="202" stroke="#68dc9f" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M 605.1 206.3 L 613.0 202.0 L 605.1 197.7" fill="none" stroke="#68dc9f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="329" y="147" width="270" height="114" rx="19" fill="#35d07f" opacity="0.200" filter="url(#glow)"/>
+  <rect x="334" y="157" width="260" height="104" rx="15" fill="rgba(21,83,51,0.85)"/>
+  <rect x="334" y="150" width="260" height="104" rx="15" fill="rgba(53,208,127,0.16)" stroke="rgba(53,208,127,0.42)" stroke-width="1.25" filter="url(#cardSh)"/>
+  <rect x="334" y="150" width="260" height="104" rx="15" fill="url(#sheen)"/>
+  <path d="M 349 151.25 H 579" stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<text x="464" y="192" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">Live 5h/7d usage gauge per</text>
+<text x="464" y="212" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">track</text>
+  <rect x="611" y="147" width="270" height="114" rx="19" fill="#3aa0ff" opacity="0.200" filter="url(#glow)"/>
+  <rect x="616" y="157" width="260" height="104" rx="15" fill="rgba(23,64,102,0.85)"/>
+  <rect x="616" y="150" width="260" height="104" rx="15" fill="rgba(58,160,255,0.16)" stroke="rgba(58,160,255,0.42)" stroke-width="1.25" filter="url(#cardSh)"/>
+  <rect x="616" y="150" width="260" height="104" rx="15" fill="url(#sheen)"/>
+  <path d="M 631 151.25 H 861" stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<text x="746" y="192" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">Threshold lever (default</text>
+<text x="746" y="212" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">90%)</text>
+  <line x1="456" y1="336" x2="472" y2="336" stroke="#ffb020,#35d07f,#3aa0ff,#ff5d5d" stroke-width="9" opacity="0.3" filter="url(#glow)" stroke-linecap="round"/>
+  <line class="flow-line" x1="456" y1="336" x2="472" y2="336" stroke="#9d85ff" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M 464.1 340.3 L 472.0 336.0 L 464.1 331.7" fill="none" stroke="#9d85ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="188" y="281" width="270" height="114" rx="19" fill="#ffb020,#35d07f,#3aa0ff,#ff5d5d" opacity="0.200" filter="url(#glow)"/>
+  <rect x="193" y="291" width="260" height="104" rx="15" fill="rgba(50,37,102,0.85)"/>
+  <rect x="193" y="284" width="260" height="104" rx="15" fill="rgba(124,92,255,0.16)" stroke="rgba(124,92,255,0.42)" stroke-width="1.25" filter="url(#cardSh)"/>
+  <rect x="193" y="284" width="260" height="104" rx="15" fill="url(#sheen)"/>
+  <path d="M 208 285.25 H 438" stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<text x="323" y="326" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">Switch thrown to</text>
+<text x="323" y="346" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">fullest-quota track</text>
+  <rect x="470" y="281" width="270" height="114" rx="19" fill="#22d3ee" opacity="0.200" filter="url(#glow)"/>
+  <rect x="475" y="291" width="260" height="104" rx="15" fill="rgba(14,84,95,0.85)"/>
+  <rect x="475" y="284" width="260" height="104" rx="15" fill="rgba(34,211,238,0.16)" stroke="rgba(34,211,238,0.42)" stroke-width="1.25" filter="url(#cardSh)"/>
+  <rect x="475" y="284" width="260" height="104" rx="15" fill="url(#sheen)"/>
+  <path d="M 490 285.25 H 720" stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<text x="605" y="326" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">Work continues on new</text>
+<text x="605" y="346" font-family="ui-sans-serif,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="middle" dominant-baseline="central">account</text>
+<text x="464" y="451" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Monaco,Consolas,monospace" font-size="13" font-weight="400" fill="#7c8aa0" text-anchor="middle">claude-swap watches each account's usage and throws the switch to the one with the most quota left before</text>
+<text x="464" y="470.5" font-family="ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Monaco,Consolas,monospace" font-size="13" font-weight="400" fill="#7c8aa0" text-anchor="middle">any account hits its limit</text>
+</svg>
